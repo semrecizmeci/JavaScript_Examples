@@ -1,0 +1,22 @@
+"use strick";
+
+metot();
+
+function metot() {
+  console.log("ben metot funk");
+  metot1(metot4);
+  metot4();
+  function metot1(callback) {
+    setTimeout(() => {
+      console.log("ben metot1 funk");
+    }, 5);
+    callback();
+    metot2();
+    function metot2() {
+      console.log("ben metot2 funk");
+    }
+  }
+  function metot4() {
+    console.log("ben metot3 funk");
+  }
+}
